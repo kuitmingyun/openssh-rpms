@@ -50,7 +50,7 @@ if [[ ! -d $rpmtopdir ]]; then
   exit 1
 fi
 
-source version.env
+source $__dir/version.env
 CHECKEXISTS() {
   if [[ ! -f $__dir/downloads/$1 ]];then
     echo "$1 not found, run 'pullsrc.sh', or manually put it in the downloads dir."
